@@ -1,0 +1,22 @@
+{
+  "name": "express-jest-pipeline",
+  "version": "1.0.0",
+  "description": "1. crear app node js\r 2. subir al branch\r 3. crear un pipeline que compile la aplicación",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}
