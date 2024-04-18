@@ -1,14 +1,16 @@
-const express = require('express'); 
-
+const express = require('express');
 let app = express();
-
 
 app.get('/', function(req, res){
     res.send('Enviando respuesta desde node');
- });
+});
 
-app.listen(3003, function(req, res){
-    console.log("Servidor corriendo en el puerto: 3003")
-  })
+// Exportar la función que inicia el servidor
+module.exports.startServer = function(port) {
+    return app.listen(port, () => {
+        console.log(`Servidor corriendo en el puerto: ${port}`);
+    });
+};
 
-module.exports = app;
+// Exportar la aplicación Express 
+module.exports.app = app;

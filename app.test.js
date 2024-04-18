@@ -1,11 +1,11 @@
 const request = require('supertest');
-const app = require('./app');
+const { startServer } = require('./app'); 
 
 describe('GET /', () => {
  let server;
 
  beforeAll(() => {
-    server = app.startServer(3003); // Iniciar el servidor antes de los tests
+    server = startServer(3003); // Inicia el servidor antes de los tests
  });
 
  afterAll(done => {
